@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>班级成员</title>
+<link rel="stylesheet" type="text/css" href="css/member.css"/>
+<link type="text/css" rel="stylesheet" href="css/navigation-2.css" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="js/lrtk.js"></script>
+<link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+<!-- 导航条开始 -->
+<div id="main-nav" class="menu">
+	<ul>
+		<li><a href="index.html">班级首页</a></li>
+		<li><a href="rongyun.html">班级荣誉</a></li>
+		<li><a href="activity.html">班级活动</a></li>
+		<li><a href="member.htm">成员树</a></li>
+		<li><a href="love.html">永远的7班</a></li>
+	</ul>
+</div>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#main-nav li a").wrapInner('<span class="out"></span>');
+	$("#main-nav li a").each(function(){
+		$('<span class="over">' + $(this).text() + '</span>').appendTo(this);
+	});
+
+	$("#main-nav li a").hover(function(){
+		$(".out",this).stop().animate({'top':'50px'},200);
+		$(".over",this).stop().animate({'top':	'0px'},200);
+	},function(){
+		$(".out",this).stop().animate({'top':'0px'},200);
+		$(".over",this).stop().animate({'top':'-50px'},200);
+	});
+});
+</script><!-- 导航条结束 -->
+
+<div id="div1">
+<a href="student/hj.htm">何洁</a>
+<a href="student/gs.htm">龚爽</a>
+<a href="student/tjq.htm">唐建权</a>
+<a href="student/wf.htm">吴帆</a>
+<a href="student/hlt.htm">何露霆</a>
+<a href="student/wxl.htm">王小丽</a>
+<a href="student/zyl.htm">邹雅丽</a>
+<a href="student/lrx.htm">李瑞霞</a>
+<a href="student/chy.htm">陈宏业</a>
+<a href="student/zrf.htm">张睿锋</a>
+<a href="student/zjz.htm">朱俊璋</a>
+<a href="student/zw.htm">张伟</a>
+<a href="student/zl.htm">张磊</a>
+<a href="student/yh.htm">袁欢</a>
+<a href="student/cb.htm">程斌</a>
+<a href="student/xc.htm">谢超</a>
+<a href="student/fyt.htm">方昀彤</a>
+<a href="student/qk.htm">秦坤</a>
+<a href="student/lx.htm">李昕</a>
+<a href="student/tyl.htm">涂懿珑</a>
+<a href="student/lf.htm">林飞</a>
+<a href="student/zk.htm">赵阔</a>
+<a href="student/lsw.htm">罗胜文</a>
+<a href="student/wzl.htm">汪志力</a>
+<a href="student/ws.htm">王爽</a>
+<a href="student/whz.htm">王涵之</a>
+<a href="student/xmw.htm">肖明伟</a>
+<a href="student/zh.htm">曾瀚</a>
+<a href="student/cc.htm">程城</a>
+<a href="student/cyx.htm">陈雨轩</a>
+</div>
+</body>
+</html>

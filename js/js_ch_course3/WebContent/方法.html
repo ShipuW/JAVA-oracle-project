@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function func(){
+		alert("我是一个函数");
+	}
+	var obj = new Object();
+	obj.show = function(){
+		alert("我是arr的方法");
+	};
+	func();
+	obj.show();
+	obj.func = func();
+	obj.func();
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+
+	<package name="struts" extends="struts-default" namespace="/">
+	
+		<action name="isIdExt" class="com.smart.action.IsIdExt"></action>
+	    <!-- 添加 -->	
+		<action name="insertAction" class="com.smart.action.InsertAction">
+			<result name="success">index.jsp</result>
+			<result type="redirect" name="input">index.jsp</result>
+		</action>
+		<!-- 查询学生信息 -->
+		<action name="selectAction" class="com.smart.action.SelectInfoAction">
+			<result name="success">search.jsp</result>
+		</action>
+			<!-- 删除学生信息 -->
+		<action name="deleteAction" class="com.smart.action.DeleteAction">
+			<result name="success">deleteStu.jsp</result>
+			<result type="redirect" name="input">deleteStu.jsp</result>
+		</action>
+		 <!-- 修改 -->	
+		<action name="modifyAction" class="com.smart.action.ModifyAction">
+			<result name="success">modify.jsp</result>
+			<result type="redirect" name="input">modify.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>

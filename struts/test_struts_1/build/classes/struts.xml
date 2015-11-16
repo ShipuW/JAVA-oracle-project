@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="struts" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="theInterceptor1"
+				class="com.oracle.interceptor.TheInterceptor1">
+				<!-- 配置拦截器参数 -->
+				<param name="test">oracle</param>
+			</interceptor>
+
+			<interceptor name="theInterceptor2"
+				class="com.oracle.interceptor.TheInterceptor2"></interceptor>
+		</interceptors>
+		<action name="login" class="com.oracle.action.LoginAction">
+			<result name="success">/result.jsp</result>
+			<!-- 引用拦截器 -->
+			<interceptor-ref name="theInterceptor1"></interceptor-ref>
+			<interceptor-ref name="theInterceptor2" />
+			<interceptor-ref name="defaultStack" />
+		</action>
+	</package>
+</struts>

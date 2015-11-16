@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	var arr = new Array(3,2,2,5,65);
+	arr.sum = function(){
+		var result = 0;
+		for ( var int = 0; int < arr.length; int++) {
+			result +=arr[int];
+		}
+		return result;
+	};
+	alert(arr.sum());
+	var obj = new Array(1,2,3);
+	alert(obj.sum());
+</script>
+<body>
+
+</body>
+</html>

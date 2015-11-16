@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		//得到所有的a标签
+		var myLinks = document.getElementsByTagName("a");
+		//动态的添加方法onclick
+		for ( var i = 0; i < myLinks.length; i++) {
+			//alert(myLinks[i]);
+			myLinks[i].onclick = function() {
+				alert("hello world");
+			}
+		}
+	}
+</script>
+
+</head>
+<body>
+	<a href="#">test1</a>
+	<br>
+	<a href="#">test2</a>
+	<br>
+	<a href="#">test3</a>
+	<br>
+	<a href="#">test4</a>
+	<br>
+	<a href="#">test5</a>
+	<br>
+	<a href="#">test6</a>
+	<br>
+	<a href="#">test7</a>
+	<br>
+	<a href="#">test8</a>
+	<br>
+	<a href="#">test9</a>
+	<br>
+</body>
+</html>

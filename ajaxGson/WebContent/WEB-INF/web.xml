@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ajaxGson</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 配置我们ajax访问两个数字相加的servlet -->
+  <servlet>
+  	<servlet-name>CountServlet</servlet-name>
+  	<servlet-class>com.ajax.action.CountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CountServlet</servlet-name>
+  	<url-pattern>/ajaxServlet</url-pattern>
+  </servlet-mapping>
+   <servlet>
+  	<servlet-name>StudentServlet</servlet-name>
+  	<servlet-class>com.ajax.action.StudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StudentServlet</servlet-name>
+  	<url-pattern>/studentServlet</url-pattern>
+  </servlet-mapping>
+   <servlet>
+  	<servlet-name>StudentAllServlet</servlet-name>
+  	<servlet-class>com.ajax.action.StudentAllServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StudentAllServlet</servlet-name>
+  	<url-pattern>/studentAllServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

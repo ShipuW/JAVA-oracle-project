@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <!--这是一个注释-->
+    <hello he="ccc">
+        <test cc="cc">
+            <aaa a="b" cc="cc" c="c">同时添加多个属性</aaa>
+        </test>
+    </hello>
+</root>
+

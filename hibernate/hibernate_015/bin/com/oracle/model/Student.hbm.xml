@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.oracle.model.Student" table="STUDENT">
+		<!--composite-id联合主键id -->
+		<composite-id>
+			<key-property name="cardId" type="string">
+				<column name="cardId"></column>
+			</key-property>
+			<key-property name="name" type="string">
+				<column name="name"></column>
+			</key-property>
+		</composite-id>
+		
+		<property name="age" type="int">
+			<column name="AGE" />
+		</property>
+	</class>
+</hibernate-mapping>

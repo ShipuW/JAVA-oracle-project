@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript创建节点信息</title>
+</head>
+<body>
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		var addItems = function() {
+			/*document.getElementById("div1").innerHTML = "";
+			var value = parseInt(document.getElementById('itemsNumber').value);
+			for (var i = 0; i < value; i++) {
+				var input = document.createElement("input");
+				input.setAttribute("type", "text");
+				var br = document.createElement("br");
+				document.getElementById("div1").appendChild(input);
+				document.getElementById("div1").appendChild(br);
+			}
+			 */
+			document.getElementById("div1").innerHTML = "";
+			 //$("#itemsNumber").val()得到我们文本框的值行等价于document.getElementById('itemsNumber').value
+			var value = parseInt($("#itemsNumber").val());
+			var str = "";
+			for (var i = 0; i < value; i++) {
+				str += "<input type='text'><br>";
+			}
+			alert(str);
+			$("#div1").append(str);
+			
+		}
+	</script>
+</head>
+
+<body>
+	<p>你好</p>
+	<input type="text" id="itemsNumber">
+	<input type="button" id="btn" value="click" onclick="addItems();">
+	
+	<div id="div1"></div>
+
+
+</body>
+</html>

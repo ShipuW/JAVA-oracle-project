@@ -1,0 +1,44 @@
+package com.cqupt.qq.bean;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class PropertiesUtil {
+	public static boolean checkpass(int id,String pass){
+		Properties pro = new Properties();
+		String path = System.getProperty("user.dir");
+		try {
+			InputStream is = new FileInputStream(path+"/src/com/cqupt/qq/bean/User.properties");
+			pro.load(is);
+			is.close();
+			if(pro.getProperty(id+".pass").equals(pass)){
+				return true;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+		
+	}
+	
+	public static boolean check(int id){
+		Properties pro = new Properties();
+		String path = System.getProperty("user.dir");
+		try {
+			InputStream is = new FileInputStream(path+"/src/com/cqupt/qq/bean/User.properties");
+			pro.load(is);
+			is.close();
+			if(pro.getProperty(id+".id")!=null){
+				return true;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+		
+	}
+}

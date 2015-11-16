@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+
+	
+	//<username>oracle</username>
+	//创建一个对象
+	var str = {
+			"username":"oracle"
+	};
+	//alert(str.username);
+	
+	//<username>oracle</username>
+	//<password>123</password>
+	//username双引号可写可不写
+	//username对象名后加:所对应的值，如果有多个对象我们使用(,)然后后边添加新的内容
+	//"oracle"字符串
+	//123数字
+	//trueboolean
+	var str1={
+			username:"oralce",password:123
+	};
+	//alert(str1.username+"   "+str1.password);
+	
+	//<user>
+	//<username>oracle</username>
+	//<password>123</password>
+	//</user>
+	//如查user对象下还有对象就使用
+	/*
+		1."user":{}
+		2."user":{对象}
+	*/
+	var str2={
+			"user":{
+				"username":"oracle","password":"123"
+			}
+	};
+	//取到str2对象中的username
+	//alert(str2.user.username);
+	/*
+	<users>
+	<user>
+		<username>oracle</username>
+		<password>123</password>
+	</user>
+	<user>
+		<username>java</username>
+		<password>123</password>
+	</user>
+	</users>
+	数组[我们对应的对象，如果有多个实用(,)隔开]
+	*/
+	var str3={
+			"users":{
+						"user":[
+							        {"username":"oracle","password":"123"}
+									,{"username":"java","password":"123"}
+									]	
+					
+			}
+	};
+	//输出java
+	alert(str3.users.user[1].username);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

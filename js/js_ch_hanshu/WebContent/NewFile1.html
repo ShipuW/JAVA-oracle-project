@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function hello(){
+		//document.write("我的第一个函数！"); 
+		alert("我的第一个函数！");
+	}
+	function helloWorld(e){
+		alert(e);
+	}
+	//helloWorld('e');
+	function show(i,j){
+		return i+j;
+	}
+	function returnTrue(){
+		return true;
+	}
+	alert(returnTrue());
+</script>
+<body>
+	<!--  -->
+	<input type="button" onclick="hello();" value="调用hello" />
+	<br/>
+	<input type="button" onclick="helloWorld('你好 欢迎来到javascript的世界');" value="调用hello带参数的" />
+	<br>
+	<input type="button" onclick="alert(show(null,null));" value="调用show()" />
+	
+	
+</body>
+</html>

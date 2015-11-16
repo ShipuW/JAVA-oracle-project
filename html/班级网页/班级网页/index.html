@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<title>无敌7班</title>
+<meta name="keywords" content="Keywords" />
+<meta name="description" content="Description" />
+<link type="text/css" rel="stylesheet" href="css/master.css" />
+<link type="text/css" rel="stylesheet" href="css/navigation.css" />
+<link type="text/css" rel="stylesheet" href="css/jscrollpane.css" />
+<link type="text/css" rel="stylesheet" href="css/banwei.css" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.foucs.js"></script>
+<link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+<div id="page-container">
+<div id="weather">
+<iframe allowtransparency="true" frameborder="0" width="600" height="100" scrolling="no" src="http://tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=0&d=3&k=&f=2&q=1&e=1&a=1&c=54511&w=600&h=100">
+</iframe>
+</div>
+<div id="logo"><a href="index.html"><img src="images/logo/banhui.png" width="200" height="120" alt="计算机7班"></a></div>
+<!-- 动画导航条 -->
+<div id="main-nav" class="menu">
+	<ul>
+		<li><a href="index.html">班级首页</a></li>
+		<li><a href="rongyun.html">班级荣誉</a></li>
+		<li><a href="activity.html">班级活动</a></li>
+		<li><a href="member.htm">成员树</a></li>
+		<li><a href="love.html">永远的7班</a></li>
+	</ul>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#main-nav li a").wrapInner('<span class="out"></span>');
+	$("#main-nav li a").each(function(){
+		$('<span class="over">' + $(this).text() + '</span>').appendTo(this);
+	});
+
+	$("#main-nav li a").hover(function(){
+		$(".out",this).stop().animate({'top':'50px'},200);
+		$(".over",this).stop().animate({'top':	'0px'},200);
+	},function(){
+		$(".out",this).stop().animate({'top':'0px'},200);
+		$(".over",this).stop().animate({'top':'-50px'},200);
+	});
+});
+</script><!-- 动画导航条结束 -->
+<br/>
+<!-- 焦点图片滚动 -->
+<div class="focusbox">
+	<div id="fullbanner">
+		<div class="wrappic">
+			<ul>
+				<li class="plan"><img src="images/headers/001.png" alt="0401207" /></li>
+				<li class="plan"><img src="images/headers/002.png" alt="0401207" /></li>
+				<li class="plan"><img src="images/headers/003.png" alt="0401207" /></li>
+				<li class="plan"><img src="images/headers/004.png" alt="0401207" /></li>
+				<li class="plan"><img src="images/headers/005.png" alt="0401207" /></li>
+				<li class="plan"><img src="images/headers/006.png" alt="0401207" /></li>
+				<li class="plan"><img src="images/headers/007.png" alt="0401207" /></li>
+				<li class="plan"><img src="images/headers/008.png" alt="0401207" /></li>
+			</ul>
+		</div>
+		
+		<div class="helper">
+			<div class="mask-left"></div>
+			<div class="mask-right"></div>
+			<a href="javascript:void();" class="prev arrow-left"></a>
+			<a href="javascript:void();" class="next arrow-right"></a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.foucs({
+		direction: 'left'
+	});
+});
+</script>
+<!-- 焦点图片滚动结束 -->
+
+
+<div id="sidebar-a">
+<h2><a href="rongyun.html">成果:</a></h2>
+	<p>二级过级率96.67%，排名第二<br/>
+	      四级过级率76.67%，排名第一<br/>
+	      省部级及以上奖项8人次，校级奖项37人次<br/>
+	      进入南山工作室4人，智能终端实验室2人<br/>
+	      奖金获得率30%<br/>
+	      参加单片机应用设计大赛，智能手机应用设计大赛，oracle极限编程大赛，高校电子联盟大赛，实控大赛等各种竞赛<br/>
+	</p>
+</div>
+
+
+<div id="content">
+<h2>班级简介：</h2>
+		<p>红日初升，其道大光，河出伏流，一泻汪洋。年轻的我们，是五线谱上闪烁的音符，共同谱成的是大学辉煌的乐章。
+		0401207由30名成员组成，其中有1名正式党员，2名发展对象，8名入党积极分子，29名共青团员。
+		两年来，我们本着团结、勤奋、进取的精神原则，经过不懈的努力，现已成为一个分工明确的优秀班集体。
+		作为班级的一份子，大家都团结互助，为班级荣誉而战，不辞劳苦，奋力拼搏，终于取得了应有的回报。
+		来让本支部学习情况、过级率一直名列前茅，支部成员一直活跃于各种活动社会工作中，为学校、为整个社会贡献自己的一份力。</p>
+</div>
+
+<!-- 鼠标悬停,滑动显示图片信息 -->
+
+<div class="banwei_img">
+<div class="power">班级核心成员</div>
+	<ul>
+		<li> 
+			<img src="images/banwei/b1.png"/>
+			<div class="box">
+				<h2>班长</h2><br/>
+				<p><a href="student/zjz.htm">朱俊璋</a></p>
+			</div>
+		</li>
+		<li> 
+			<img src="images/banwei/b2.png"/>
+			<div class="box">
+				<h2>宣传委员</h2><br/>
+				<p><a href="student/lf.htm">林飞</a></p>
+			</div>
+		</li>
+		<li> 
+			<img src="images/banwei/b3.png"/>
+			<div class="box">
+				<h2>团支书</h2><br/>
+				<p><a href="student/wxl.htm">王小丽</a></p>
+			</div>
+		</li>
+		<li> 
+			<img src="images/banwei/b4.png"/>
+			<div class="box">
+				<h2>体育委员</h2><br/>
+				<p><a href="student/ws.htm">王爽</a></p>
+			</div>
+		</li>
+		<li> 
+			<img src="images/banwei/b5.png"/>
+			<div class="box">
+				<h2>组织委员</h2><br/>
+				<p><a href="student/cb.htm">程斌</a></p>
+			</div>
+		</li>
+		<li> 
+			<img src="images/banwei/b6.png"/>
+			<div class="box">
+				<h2>生活委员</h2><br/>
+				<p><a href="student/wf.htm">吴帆</a></p>
+			</div>
+		</li>
+		<li> 
+			<img src="images/banwei/b7.png"/>
+			<div class="box">
+				<h2>科创委员</h2><br/>
+				<p><a href="student/zrf.htm">张睿锋</a></p>
+			</div>
+		</li>
+		<li> 
+			<img src="images/banwei/b8.png"/>
+			<div class="box">
+				<h2>学习委员</h2><br/>
+				<p><a href="student/tjq.htm">唐建权</a></p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+$(function(){
+	$('.banwei_img ul li').hover(function(){
+		$(this).children('.box').stop(true,true).delay(100).animate({'top':0,opacity:0.8},300);
+	},function(){
+		$(this).children('.box').stop(true,true).animate({'top':-142,opacity:0},200);
+	})
+})
+</script>
+<!-- 鼠标悬停,滑动显示图片信息结束 -->
+
+<div id="footer">
+<div class="altnav">
+<a href="index.html">网站首页</a>|
+<a href="member.htm">关于我们</a>|
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=1&uin=969603489&site=qq&menu=yes">联系我们</a>|
+<a href="#">网站地图</a>
+</div><br/>
+Copyright &copy; 2014 计算机学院 0401207班 版权所有 All Rights Reserved<br/>
+<div class="altnav_2">友情链接：
+<a href="http://jwzx.cqupt.edu.cn/">教务在线</a>
+<a href="http://202.202.43.125/">红岩网校</a>
+<a href="http://www.baidu.com/">百度</a>
+<a href="http://www.renren.com/">人人网</a>
+<a href="http://www.sina.com.cn/">新浪</a>
+<a href="http://weibo.com/">新浪微博</a>
+<a href="http://www.qq.com/">腾讯</a>
+<a href="http://hao.360.cn/">360导航</a>
+<a href="http://www.0xiao.com/">零点校园</a>
+</div>
+</div>
+</div>
+</body>
+</html>

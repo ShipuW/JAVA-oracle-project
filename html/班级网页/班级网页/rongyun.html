@@ -1,0 +1,150 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>班级荣誉</title>
+<meta name="keywords" content="点击缩略图切换大图展示详情" />
+<meta name="description" content="jquery图片滚动切换展示,点击左右按钮控制缩略图片滚动，通过点击缩略图片切换显示该大图内容详情。" />
+<link type="text/css" rel="stylesheet"  href="css/list.css" />
+<link type="text/css" rel="stylesheet" href="css/navigation-1.css" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="js/list.js"></script>
+<link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+<!-- 导航条开始 -->
+<div id="main-nav" class="menu">
+	<ul>
+		<li><a href="index.html">班级首页</a></li>
+		<li><a href="rongyun.html">班级荣誉</a></li>
+		<li><a href="activity.html">班级活动</a></li>
+		<li><a href="member.htm">成员树</a></li>
+		<li><a href="love.html">永远的7班</a></li>
+	</ul>
+</div>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#main-nav li a").wrapInner('<span class="out"></span>');
+	$("#main-nav li a").each(function(){
+		$('<span class="over">' + $(this).text() + '</span>').appendTo(this);
+	});
+
+	$("#main-nav li a").hover(function(){
+		$(".out",this).stop().animate({'top':'50px'},200);
+		$(".over",this).stop().animate({'top':	'0px'},200);
+	},function(){
+		$(".out",this).stop().animate({'top':'0px'},200);
+		$(".over",this).stop().animate({'top':'-50px'},200);
+	});
+});
+</script><!-- 导航条结束 -->
+
+<!-- 滚动切换大图 -->
+<div class="scrolltab">
+	<span id="sLeftBtnA" class="sLeftBtnABan"></span>
+	<span id="sRightBtnA" class="sRightBtnA"></span>
+	<ul class="ulBigPic">
+		<li class="liSelected">
+			<span class="sPic">
+				<i class="iBigPic"><img alt="大图" width="560" height="420" src="images/rongyun/01.JPG" /></i>			</span>
+			<span class="sSideBox">
+				<span class="sIntro">简介：2013年11月，朱俊璋同学在第五届全国大学生数学竞赛（非数学类）预赛中表现优秀 被中国数学会普及工作委员会授予二等奖荣誉证书</span>
+			</span>
+		</li>
+		<li>
+			<span class="sPic">
+				<i class="iBigPic"><img alt="大图" width="560" height="420" src="images/rongyun/02.JPG" /></i>			</span>
+			<span class="sSideBox">	
+				<span class="sIntro">简介：2013年11月，林飞同学在公寓区文明标语口号征集活动中荣获 二等奖</span>
+			</span>
+		</li>	
+		<li>
+			<span class="sPic">
+				<i class="iBigPic"><img alt="大图" width="560" height="420" src="images/rongyun/03.JPG" /></i>			</span>
+			<span class="sSideBox">
+				<span class="sIntro">简介：王涵之同学所在团队在以“梦想起航·成就未来”为主题的弹子石CBD创业计划大赛中表现优秀，获得铜奖和10000元奖金</span>
+			</span>
+		</li>	
+		<li>
+			<span class="sPic">
+				<i class="iBigPic"><img alt="大图" width="560" height="420" src="images/rongyun/04.JPG" /></i>			</span>
+			<span class="sSideBox">
+				<span class="sIntro">简介：林飞同学在2013年11月因在2012至2013学年成绩优秀，工作认真，表现突出，被重庆邮电大学评为 优秀学生干部</span>
+			</span>
+		</li>
+		<li>
+			<span class="sPic">
+				<i class="iBigPic"><img alt="大图" width="560" height="420" src="images/rongyun/05.JPG" /></i>			</span>
+			<span class="sSideBox">
+				<span class="sIntro">简介：这是一路走来，我们班获得的部分奖项，每一张奖状后面都凝聚了大家的努力与汗水，有付出就有收获！</span>
+			</span>
+		</li>
+		<li>
+			<span class="sPic">
+				<i class="iBigPic"><img alt="大图" width="560" height="420" src="images/rongyun/06.JPG" /></i>			</span>
+			<span class="sSideBox">
+				<span class="sIntro">简介：2013年10月，何露婷同学因在2013中国（重庆）国际云计算博览会上积极参与志愿者服务工作，被云博会组委会办公室授予荣誉证书</span>
+			</span>
+		</li>
+		<li>
+			<span class="sPic">
+				<i class="iBigPic"><img alt="大图" width="560" height="420" src="images/rongyun/07.JPG" /></i>			</span>
+			<span class="sSideBox">
+				<span class="sIntro">简介：朱俊璋同学在2012至2013学年德、智、体全面发展，成绩优异，被重庆邮电大学评为三好学生</span>
+			</span>
+		</li>
+		<li>
+			<span class="sPic">
+				<i class="iBigPic"><img alt="大图" width="560" height="420" src="images/rongyun/08.JPG" /></i>			</span>
+			<span class="sSideBox">
+				<span class="sIntro">简介：2013年5月，0401207团支部被共青团重庆邮电大学委员会评为 重庆邮电大学2012年度五四红旗团支部</span>
+			</span>
+		</li>
+	</ul><!--ulBigPic end-->
+	
+	<div class="dSmallPicBox">
+		<div class="dSmallPic">
+			<ul class="ulSmallPic">
+				<li class="liSelected">
+					<span class="sPic"><img alt="荣誉" src="images/rongyun/s01.jpg" width="135" height="100" /></span>
+					<span class="sTitle">数学竞赛二等奖</span>
+				</li>
+				<li>
+					<span class="sPic"><img alt="荣誉" src="images/rongyun/s02.jpg" width="135" height="100" /></span>
+					<span class="sTitle">口号征集活动二等奖</span>
+				</li>
+				<li>
+					<span class="sPic"><img alt="荣誉" src="images/rongyun/s03.jpg" width="135" height="100" /></span>
+					<span class="sTitle">CBD创业大赛铜奖</span>
+				</li>
+				<li>
+					<span class="sPic"><img alt="荣誉" src="images/rongyun/s04.jpg" width="135" height="100" /></span>
+					<span class="sTitle">优秀学生干部</span>
+				</li>
+				<li>
+					<span class="sPic"><img alt="荣誉" src="images/rongyun/s05.jpg" width="135" height="100" /></span>
+					<span class="sTitle">各种荣誉证书…</span>
+				</li>
+				<li>
+					<span class="sPic"><img alt="荣誉" src="images/rongyun/s06.jpg" width="135" height="100" /></span>
+					<span class="sTitle">云博会</span>
+				</li>
+				<li>
+					<span class="sPic"><img alt="荣誉" src="images/rongyun/s07.jpg" width="135" height="100" /></span>
+					<span class="sTitle">三好学生</span>
+				</li>
+				<li>
+					<span class="sPic"><img alt="荣誉" src="images/rongyun/s08.jpg" width="135" height="100" /></span>
+					<span class="sTitle">五四红旗团支部</span>
+				</li>
+			</ul>
+		</div>
+		<span id="sLeftBtnB" class="sLeftBtnBBan"></span>
+		<span id="sRightBtnB" class="sRightBtnB"></span>
+	</div><!--dSmallPicBox end-->
+</div><!-- 滚动切换大图结束 -->
+</body>
+</html>

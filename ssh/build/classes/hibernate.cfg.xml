@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <!-- spring和Hibernate集成时我们只需要一些基本信息 
+ 数据库的方言 -->
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <!--显示sql开发时所应用的，开发完成以后删除 -->
+  <property name="hibernate.show_sql">true</property>
+  <!-- 格式化sql语句 -->
+  <property name="hibernate.format_sql">true</property>
+  <!-- 自动更新sql数据库表 -->
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <!-- 二级缓存时，在这里配置 -->
+ </session-factory>
+</hibernate-configuration>

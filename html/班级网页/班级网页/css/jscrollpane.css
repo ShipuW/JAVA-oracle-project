@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+*{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+a,img{
+	border:0;
+}
+/* focusbox */
+.focusbox{
+	position:relative;
+	overflow:hidden;
+	zoom:1; /*变焦，缩放*/
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+#fullbanner{
+	width:960px;
+	height:410px;
+	margin:auto;
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+/*设置一个950*400的相框，溢出部分隐藏*/
+#fullbanner li a{
+	display:block;
+	width:950px;
+	height:400px;
+	overflow:hidden;
+}
+#fullbanner img{
+	width:950px;
+	height:400px;
+}
+#fullbanner ul{
+	width:960px;
+	height:410px;
+}
+#fullbanner .wrappic{
+	overflow:hidden; /*隐藏左右图片*/
+	position:absolute;
+}
+/*更改左右按钮的属性*/
+#fullbanner .prev, #fullbanner .next{
+	filter:alpha(Opacity=30); /*更改左右按钮透明度*/
+	opacity:.3;
+	position:absolute;
+	top:50%; /*按钮距离顶端的位置*/
+	background-color:gray;
+	z-index:3;
+}
+#fullbanner .prev{
+	margin-top:-25px;
+	margin-left:13px;
+}
+#fullbanner .next{
+	margin:-25px 13px 0 0;
+	right:0; /*左右按钮分离*/
+}
+/*鼠标悬停时改变按钮颜色*/
+#fullbanner .prev:hover, #fullbanner .next:hover{
+	background-color:#303030;
+}
+
+#fullbanner .mask-left, #fullbanner .mask-right, #fullbanner .plan{
+	background:#fff;
+	padding:5px; /*滚动窗口与顶部有5个像素的填充*/
+	z-index:1;
+	position:absolute;
+	top:0;
+	left:0;
+	width:950px;
+	height:400px;
+	overflow:hidden;
+	left:1920px;
+}
+/*更改左右图片透明度*/
+#fullbanner .mask-left, #fullbanner .mask-right{
+	z-index:4;
+	filter:alpha(Opacity=60);
+	opacity:.6;
+	background:#d5bd89;
+	overflow:hidden;
+}
+#fullbanner .mask-left{
+	left:-960px;
+}
+#fullbanner .mask-right{
+	left:960px;
+}
+
+.arrow-left,.arrow-right{
+	background:url(../images/headers/arrow.png) no-repeat;
+}
+.arrow-left{
+	background-position:15px 12px;
+	height:50px;
+	width:50px;
+}
+.arrow-left:hover{
+	background-position:-45px 12px;
+}
+.arrow-right{
+	background-position:-103px 12px;
+	height:50px;
+	width:50px;
+}
+.arrow-right:hover{
+	background-position:-163px 12px;
+}

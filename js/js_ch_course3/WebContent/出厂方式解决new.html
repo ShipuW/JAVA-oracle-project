@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function CreatePerson(name,qq){
+		this.name = name;
+		this.qq = qq;
+		this.showName = function(){
+			alert(this.name);
+		};
+		this.showQq = function(){
+			alert(this.qq);
+		};
+	};
+	var obj = new CreatePerson("周杰伦",80798);
+	var obj1 = new CreatePerson("张三",8979807);
+	obj.showName();
+	obj.showQq();
+	obj1.showName();
+	obj1.showQq();
+	alert(obj.showName == obj1.showName);
+</script>
+<body>
+
+</body>
+</html>

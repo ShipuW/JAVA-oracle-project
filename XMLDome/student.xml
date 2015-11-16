@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 整个xML是根节点document -->
+<!-- students 根元素节点 -->
+<students>
+<!-- sdd -->
+	<student id="1" age="0" bahe="aa">
+		<name>张三</name>
+		<age>16</age>
+		<sex>男</sex>
+		<height>165</height>
+	</student>
+	<student id="2">
+		<name>李四</name>
+		<age>18</age>
+		<sex>女</sex>
+		<height>160</height>
+	</student>
+	<学生>
+		<学生的名字>张三</学生的名字>
+	</学生>
+</students>

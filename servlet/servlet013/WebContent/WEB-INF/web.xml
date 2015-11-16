@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>servlet013</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>ServiceServlet</servlet-name>
+		<servlet-class>com.oracle.servlet.ServiceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServiceServlet</servlet-name>
+		<url-pattern>/serviceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	
+	
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>com.oracle.servlet.InitServlet</servlet-class>
+		<!-- 启动服务自动加载 -->
+		<load-on-startup>9</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>InitServlet</servlet-name>
+		<url-pattern>/initServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>CountServlet</servlet-name>
+		<servlet-class>com.oracle.servlet.CountServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CountServlet</servlet-name>
+		<url-pattern>/counterServlet</url-pattern>
+	</servlet-mapping>
+</web-app>

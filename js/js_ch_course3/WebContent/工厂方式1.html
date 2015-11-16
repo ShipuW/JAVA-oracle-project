@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>工厂方式1</title>
+</head>
+<script type="text/javascript">
+	function createPerson(name,qq){
+		var obj = new Object();
+		//属性
+		obj.name = name;
+		obj.qq = qq;
+		//方法
+		obj.showName = function(){
+			alert(this.name);
+		};
+		obj.showQq = function(){
+			alert(this.qq);
+		};
+		//出厂
+		return obj;
+	}
+	var obj = createPerson("周杰伦",123455);
+	obj.showName();
+	obj.showQq();
+	var obj1 = createPerson("张三",67678678);
+	obj1.showName();
+	obj1.showQq();
+	alert(obj1.showName == obj.showName);
+	
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>工厂方式解决new</title>
+</head>
+<script type="text/javascript">
+	function CreatePerson(name,qq){
+		this.name = name;
+		this.qq = qq;
+	};
+	CreatePerson.prototype.showName = function(){
+		alert("我的名字是:"+this.name);
+	};
+	CreatePerson.prototype.showQq = function(){
+		alert("我的QQ是："+this.qq);
+	};
+	var obj = new CreatePerson("周杰伦",128789678);
+	var obj1 = new CreatePerson("张三",676789);
+	obj.showName();
+	obj.showQq();
+	obj1.showName();
+	obj1.showQq();
+	alert(obj1.showName == obj.showName);
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 引入jQuery第三方名 -->
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<!-- 创建一个script -->
+<script type="text/javascript">
+	//$(documnt)将我们的文档对象转换为jQuery对象
+	//.ready()调用方法
+	//function(){}创建一个函数
+	//--------第一种方式--------
+	$(document).ready(function() {
+		alert("hello world");
+	});
+	//---第二种方式----
+	$().ready(function() {
+		alert("今天是星期二，马上要发工资了!");
+	});
+	//----第三种方式----
+	$(function() {
+		alert("这周天天都下雨!天气不错可以不用开空调!");
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

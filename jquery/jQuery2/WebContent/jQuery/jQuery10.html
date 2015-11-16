@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attr属性设置修 改p标签的title</title>
+</head>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+
+		$("input:eq(0)").click(function() {
+			//$("p").Attr("title", "oralce");
+			//设置多个属性值
+			$("p").attr({
+				"title" : "oracle",
+				"hello" : "world"
+			});
+		});
+		$("input:eq(1)").click(function() {
+			alert($('p').attr("hello"));
+		});
+
+		$("input:eq(2)").click(function() {
+			$('p').removeAttr("title");
+			alert($("p").attr("title"));
+		});
+
+	});
+</script>
+<body>
+<body>
+	<input type="button" value="button1">
+	<input type="button" value="button2">
+	<input type="button" value="button3">
+	<p title="hello world">您认为java编程如何？</p>
+	<ul>
+		<li title="1">好</li>
+		<li title="2">很好</li>
+		<li title="3">非常好</li>
+		<li title="4">特别好</li>
+		<li title="5">太好了</li>
+		<li title="6">好的无法描述了</li>
+	</ul>
+</body>
+</body>
+</html>

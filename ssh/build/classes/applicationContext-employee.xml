@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+
+	<!-- 配置dao实现类的bean -->
+	<bean id="employeeDao" class="com.oracle.ssh.dao.impl.EmployeeDaoImpl">
+		<!--注入属性 -->
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 配置servcie实现类的bean -->
+	<bean id="employeeService" class="com.oracle.ssh.service.impl.EmployeeServiceImpl">
+		<!--注入属性 -->
+		<property name="employeeDao" ref="employeeDao"></property>
+	</bean>
+	
+<!-- 创建spring的Bean用于管理员工信息 -->
+	<bean id="employeeAction" class="com.oracle.ssh.action.EmployeeAction"
+		scope="prototype">
+		<property name="employeeService" ref="employeeService"></property>
+	</bean>
+
+
+</beans>

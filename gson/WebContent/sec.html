@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*<sec>
+	<title>book</title>
+	<sig>
+		<author title="java" name="oracle"/>
+		<book title="java编程思想" price="1000" />
+	</sig>
+	<sig>
+		<author title="oracle" name="oracletest" />
+		<book title="oracle思想" price="10000" />
+	</sig>
+	</sec>
+	 */
+	/*	<sec>
+		<title>book</title>
+		<sig>
+		"sec":{
+				"title":"book"
+			}
+	 */
+	var str = {
+		"sec" : {
+			"title" : "book",
+			"sig" : [ {
+				"author" : {"title":"java","name":"oracle","author":"oracle测试"}
+				,"book":{"title":"java编程思想","price":"1000"}
+			},{
+				"author" : {"title":"oracle","name":"oracletest"}
+				,"book":{"title":"oracle编程思想","price":"1000000"}
+			}
+			]
+		}
+	};
+	 //访问里面的对象 访问sec下的title
+	 //alert(str.sec.title);
+	 //访问java编程思想
+	 //alert(str.sec.sig[0].book.title);
+	 //访问price":"1000000
+	//alert(str.sec.sig[1].book.price);
+	 //回去思考问题:<author title="java" name="oracle">oracle测试 </author>
+	 alert(str.sec.sig[0].author.author);
+</script>
+</head>
+<body>
+
+</body>
+</html>

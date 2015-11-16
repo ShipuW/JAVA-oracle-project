@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+*{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+a,img{
+	border:0;
+}
+/* menu */
+.menu{
+	height:50px;
+	width:100%;
+	overflow:hidden;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 微软雅黑;
+}
+.menu ul li{
+	float:left;
+	position:relative;
+	text-align:center;
+	line-height:50px;
+	height:50px;
+	overflow:hidden;
+}
+.menu ul li a{
+	position:relative;/* 必要元素 */
+	display:block;
+	width:150px;
+	height:50px;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+	cursor:pointer;
+}
+.menu ul li a span{
+	position:absolute;/* 必要元素 */
+	left:0;
+	width:150px;
+}
+.menu ul li a span.out{
+	top:0;
+}
+.menu ul li a span.over,
+.menu ul li a span.bg{
+	top:-50px;
+}
+#main-nav{
+	background:#737300;
+}
+#main-nav ul li a{
+	color:white;
+}
+#main-nav ul li a span.over{
+	background:#8c8c00;
+	color:#fff;
+}
